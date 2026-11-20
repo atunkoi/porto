@@ -1,0 +1,135 @@
+    :root {
+      --agungilhams-bg: #17140f;
+      --agungilhams-panel: #211d15;
+      --agungilhams-panel-light: #2b251a;
+      --agungilhams-gold: #e8bd58;
+      --agungilhams-gold-light: #f5d98f;
+      --agungilhams-text: #f7f0df;
+      --agungilhams-muted: #b9ad93;
+      --agungilhams-line: rgba(232, 189, 88, .2);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--agungilhams-bg);
+      color: var(--agungilhams-text);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+    }
+    a { color: inherit; text-decoration: none; }
+    .agungilhams-container { width: min(1100px, 90%); margin: auto; }
+    .agungilhams-header {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(23, 20, 15, .88);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--agungilhams-line);
+    }
+    .agungilhams-nav {
+      min-height: 76px; display: flex; align-items: center;
+      justify-content: space-between; gap: 24px;
+    }
+    .agungilhams-logo { font-size: 20px; font-weight: 800; letter-spacing: -.5px; }
+    .agungilhams-logo span { color: var(--agungilhams-gold); }
+    .agungilhams-menu { display: flex; align-items: center; gap: 28px; list-style: none; }
+    .agungilhams-menu a { color: var(--agungilhams-muted); font-size: 14px; transition: .2s; }
+    .agungilhams-menu a:hover { color: var(--agungilhams-gold-light); }
+    .agungilhams-button {
+      display: inline-block; padding: 12px 19px; border-radius: 9px;
+      background: var(--agungilhams-gold); color: #21190a;
+      font-size: 14px; font-weight: 700; transition: .2s;
+    }
+    .agungilhams-button:hover { background: var(--agungilhams-gold-light); transform: translateY(-2px); }
+    .agungilhams-hero {
+      min-height: 650px; display: grid; grid-template-columns: 1.15fr .85fr;
+      align-items: center; gap: 55px; padding: 80px 0;
+      position: relative; overflow: hidden;
+    }
+    .agungilhams-hero::before {
+      content: ""; position: absolute; width: 430px; height: 430px;
+      background: rgba(232, 189, 88, .12); filter: blur(100px);
+      border-radius: 50%; right: 4%; top: 12%; pointer-events: none;
+    }
+    .agungilhams-label {
+      color: var(--agungilhams-gold); font-size: 13px; font-weight: 700;
+      letter-spacing: 2px; text-transform: uppercase;
+    }
+    .agungilhams-hero h1 {
+      font-size: clamp(42px, 6vw, 70px); line-height: 1.08;
+      letter-spacing: -2.5px; margin: 18px 0;
+    }
+    .agungilhams-hero h1 span { color: var(--agungilhams-gold); }
+    .agungilhams-hero p { color: var(--agungilhams-muted); max-width: 520px; margin-bottom: 28px; }
+    .agungilhams-hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; }
+    .agungilhams-button-outline {
+      display: inline-block; padding: 11px 18px; border: 1px solid var(--agungilhams-line);
+      border-radius: 9px; color: var(--agungilhams-text); font-size: 14px;
+    }
+    .agungilhams-button-outline:hover { border-color: var(--agungilhams-gold); color: var(--agungilhams-gold-light); }
+    .agungilhams-photo-wrap { position: relative; justify-self: center; width: min(100%, 340px); }
+    .agungilhams-photo-frame {
+      position: absolute; inset: 16px -16px -16px 16px;
+      border: 1px solid rgba(232, 189, 88, .6); border-radius: 22px;
+    }
+    .agungilhams-photo {
+      position: relative; display: block; width: 100%; height: 430px;
+      object-fit: cover; object-position: center 30%; border-radius: 22px;
+      border: 1px solid rgba(255,255,255,.12);
+      filter: saturate(.86);
+    }
+    .agungilhams-photo-note {
+      position: absolute; bottom: 18px; left: -25px; padding: 12px 16px;
+      border: 1px solid var(--agungilhams-line); border-radius: 10px;
+      background: #211d15; color: var(--agungilhams-gold-light); font-size: 12px;
+    }
+    .agungilhams-section { padding: 90px 0; border-top: 1px solid var(--agungilhams-line); }
+    .agungilhams-section-heading { margin-bottom: 34px; }
+    .agungilhams-section-heading h2 { font-size: clamp(30px, 4vw, 42px); margin-top: 8px; letter-spacing: -1px; }
+    .agungilhams-section-heading p { color: var(--agungilhams-muted); margin-top: 8px; }
+    .agungilhams-about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    .agungilhams-card {
+      padding: 26px; border: 1px solid var(--agungilhams-line);
+      background: linear-gradient(145deg, var(--agungilhams-panel-light), var(--agungilhams-panel));
+      border-radius: 15px;
+    }
+    .agungilhams-card h3 { color: var(--agungilhams-gold-light); margin-bottom: 10px; font-size: 18px; }
+    .agungilhams-card p { color: var(--agungilhams-muted); font-size: 14px; }
+    .agungilhams-skills { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+    .agungilhams-skill {
+      padding: 8px 13px; border-radius: 7px; font-size: 13px;
+      background: rgba(232,189,88,.1); border: 1px solid var(--agungilhams-line);
+      color: var(--agungilhams-gold-light);
+    }
+    .agungilhams-project-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .agungilhams-project-number { color: var(--agungilhams-gold); font-size: 13px; margin-bottom: 22px; }
+    .agungilhams-project-card { min-height: 210px; display: flex; flex-direction: column; }
+    .agungilhams-project-card p { flex: 1; }
+    .agungilhams-project-type { color: var(--agungilhams-gold); font-size: 11px; text-transform: uppercase; letter-spacing: 1.2px; margin-top: 17px; }
+    .agungilhams-contact {
+      text-align: center; padding: 65px 25px;
+      background: radial-gradient(circle at top, rgba(232,189,88,.14), transparent 65%), var(--agungilhams-panel);
+      border: 1px solid var(--agungilhams-line); border-radius: 18px;
+    }
+    .agungilhams-contact h2 { font-size: clamp(30px, 4vw, 44px); margin: 10px 0; }
+    .agungilhams-contact p { color: var(--agungilhams-muted); margin: 0 auto 24px; max-width: 500px; }
+    .agungilhams-footer { padding: 25px 0; color: var(--agungilhams-muted); font-size: 12px; text-align: center; }
+    @media (max-width: 760px) {
+      .agungilhams-menu { gap: 14px; }
+      .agungilhams-menu a { font-size: 12px; }
+      .agungilhams-nav { min-height: 68px; }
+      .agungilhams-nav > .agungilhams-button { display: none; }
+      .agungilhams-hero { grid-template-columns: 1fr; gap: 45px; padding: 65px 0; text-align: center; }
+      .agungilhams-hero p { margin-left: auto; margin-right: auto; }
+      .agungilhams-hero-actions { justify-content: center; }
+      .agungilhams-photo-wrap { width: min(75%, 300px); }
+      .agungilhams-photo { height: 360px; }
+      .agungilhams-about-grid, .agungilhams-project-grid { grid-template-columns: 1fr; }
+      .agungilhams-section { padding: 70px 0; }
+    }
+    @media (max-width: 420px) {
+      .agungilhams-container { width: 92%; }
+      .agungilhams-logo { font-size: 17px; }
+      .agungilhams-menu { gap: 10px; }
+      .agungilhams-menu a { font-size: 11px; }
+      .agungilhams-photo-note { left: -12px; }
+    }
